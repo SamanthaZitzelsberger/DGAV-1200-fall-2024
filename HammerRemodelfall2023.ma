@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: HammerRemodelfall2023.ma
-//Last modified: Mon, Sep 04, 2023 01:46:03 PM
+//Last modified: Wed, Sep 06, 2023 12:53:57 PM
 //Codeset: 1252
 requires maya "2024";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.3.1.1";
@@ -10,17 +10,17 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202304191415-7fa20164c6";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22621)";
-fileInfo "UUID" "661A6EB4-4032-23EE-48B9-FD98817622E9";
+fileInfo "UUID" "0D10E423-4866-DD96-D83C-20B74E5168A8";
 createNode transform -s -n "persp";
 	rename -uid "092A6E80-421A-43BD-E65C-C5B50ADBBB00";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -23.724594498255744 22.289494060040628 33.614214059631422 ;
-	setAttr ".r" -type "double3" -14.13835272923388 318.6000000000962 0 ;
+	setAttr ".t" -type "double3" -31.830234099521313 29.114958123901125 37.99820092659737 ;
+	setAttr ".r" -type "double3" -18.938352729238542 315.00000000008475 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "AE05A63E-438C-AC59-3277-BCB4BAFF0533";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 43.220070270161251;
+	setAttr ".coi" 53.558911024976886;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -449,20 +449,20 @@ createNode mesh -n "polySurfaceShape1" -p "hammer_mesh";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "2FFDEE85-4246-5B55-22E4-8699B221410C";
+	rename -uid "06FB42A4-44DE-F635-F343-6CB7CC14EF93";
 	setAttr -s 3 ".lnk";
 	setAttr -s 3 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "A9332385-4AEF-F326-BF52-43856B2F140A";
+	rename -uid "9A7A280A-447F-7F70-B1DD-1FA51F2C6251";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "2ECA7ABE-40BF-F371-8FA7-8A8387995345";
+	rename -uid "0A06B81F-41FD-FC3F-E682-9D9185881C41";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "0C0BBCE4-4E92-DE21-DAB0-1B886B7E1BE2";
+	rename -uid "E9B97DA4-43DF-24B8-DE2B-78B8289CC38C";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "CBAF7EEE-4FC0-8D57-60C9-C6889AA45C4C";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "713C4AB6-4114-CA13-62F5-13BB4CD07173";
+	rename -uid "CE4E1EC8-4A04-B635-82C2-A99DEED0E195";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "56F8C972-4D60-64B4-2586-A0BF2E451828";
 	setAttr ".g" yes;
@@ -597,8 +597,6 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "polyBridgeEdge2.out" "hammer_meshShape.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
