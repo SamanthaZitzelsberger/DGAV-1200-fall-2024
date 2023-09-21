@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: bookshelf.ma
-//Last modified: Wed, Sep 20, 2023 09:18:02 PM
+//Last modified: Wed, Sep 20, 2023 10:49:25 PM
 //Codeset: 1252
 requires maya "2024";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.3.1.1";
@@ -10,12 +10,12 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202304191415-7fa20164c6";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22621)";
-fileInfo "UUID" "E2C36A5D-4B67-7276-E777-A280535E6385";
+fileInfo "UUID" "DA629EEC-499B-BFE1-3F36-9BAFB7CA3910";
 createNode transform -s -n "persp";
 	rename -uid "0A8C2CDE-4962-D1B6-B01A-AA8FF7110D69";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.30974210454923101 15.616669153491159 17.484606341406398 ;
-	setAttr ".r" -type "double3" -32.138352739062952 1441.7999999997012 1.9888280424962838e-16 ;
+	setAttr ".t" -type "double3" -8.1647919975153442 14.143833247069695 16.524840693627041 ;
+	setAttr ".r" -type "double3" -26.738352739062908 1412.5999999996893 -1.7912252562416495e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "D96CB2A6-471E-DE08-643B-CC8F78AA67ED";
 	setAttr -k off ".v" no;
