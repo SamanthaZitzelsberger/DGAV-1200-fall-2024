@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: fish castle.ma
-//Last modified: Sun, Dec 03, 2023 12:53:49 PM
+//Last modified: Sun, Dec 03, 2023 12:59:13 PM
 //Codeset: 1252
 requires maya "2024";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.3.1.1";
@@ -10,17 +10,17 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202304191415-7fa20164c6";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22621)";
-fileInfo "UUID" "C101CA68-44A4-CA1C-4E65-B69918BA3246";
+fileInfo "UUID" "9D2395D4-4AD6-4028-6E6E-FFBD6244FBF2";
 createNode transform -s -n "persp";
 	rename -uid "DD1F86C1-48F5-8D3C-D2B9-F0B5C9DFF713";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 2.0168228357927629 11.230391383864783 29.965366055368506 ;
+	setAttr ".t" -type "double3" 2.2944683039379949 13.675667283828798 45.871664273813764 ;
 	setAttr ".r" -type "double3" -8.7383527280564461 720.99999999990882 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "E33393A4-41E8-1197-B5CE-6CA0754F827A";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 28.321672669056849;
+	setAttr ".coi" 44.417224360348499;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
